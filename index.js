@@ -32,7 +32,9 @@ app.post('/knowledge-base', function (req, res) {
         ]
     }
     res.setHeader('Content-Type', 'application/json');
-    res.end( JSON.stringify(data) );
+    setTimeout( ()=>{
+        res.end( JSON.stringify(data) );
+    },5000)
 });
 
 app.put('/knowledge-base/1', function (req, res) {
@@ -63,7 +65,9 @@ app.put('/knowledge-base/1', function (req, res) {
         ]
     }
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(data))
+    setTimeout( ()=>{
+        res.end( JSON.stringify(data) );
+    },8000)
 });
 
 var server = app.listen(8081, '127.0.0.1' ,function () {
